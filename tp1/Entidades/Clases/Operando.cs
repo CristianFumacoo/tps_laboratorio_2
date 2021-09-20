@@ -9,24 +9,24 @@ namespace Entidades.Clases
         private double _numero;
         public string Numero { set { _numero = ValidarOperando(value); } }
 
-        //public string BinarioDecimal(string binario)
-        //{
-        //    double cont = 0;
-        //    double potencia = 0;
-        //    if(EsBinario(binario))
-        //    {
+        public string BinarioDecimal(string binario)
+        {
+            double cont = 0;
+            double potencia = 0;
+            if(EsBinario(binario))
+            {
 
-        //        for(int i = binario.Length - 1; i >= 0;i--)
-        //        {
-        //            if (binario[i] == '1')
-        //            {
-        //                cont += Math.Pow(2, potencia);
-        //            }
-        //            potencia++;
-        //        }
-        //        binario = Convert.ToString(cont);
-        //    }
-        //    else
+                for(int i = binario.Length - 1; i >= 0;i--)
+                {
+                    if (binario[i] == '1')
+                    {
+                        cont += Math.Pow(2, potencia);
+                    }
+                    potencia++;
+                }
+                binario = Convert.ToString(cont);
+            }
+            else
             {
                 binario = "Valor inválido.";
             }
